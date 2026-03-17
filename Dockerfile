@@ -1,7 +1,9 @@
-FROM python:3.9
+FROM node:18
 
 WORKDIR /app
 
-COPY app.py .
+COPY . .
 
-CMD ["python","app.py"]
+EXPOSE 3000
+
+CMD ["node","app.js"]
